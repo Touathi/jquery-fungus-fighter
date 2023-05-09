@@ -5,8 +5,9 @@ $(document).ready(onReady);
 // Example:
 // let fungusHP = 100;
 
-    let currentAP = 100
-    let currentHP = 100
+    let currentAP = 100;
+    let currentHP = 100;
+    let APprogress = 100;
 
 function onReady() {
     console.log('READY TO RUN');
@@ -34,30 +35,34 @@ function render() {
     console.log('Current AP: ',currentAP);
     $('.hp-text').text(currentHP)
     console.log('Current HP: ',currentHP);
+    $('.ap-meter').val()
 
 }
 
 function arcaneScepterBtn() {
-    console.log(currentAP,' - 12');
-    console.log(currentHP,' - 14');
      currentAP -= 12
      currentHP -= 14
+
+     $('.ap-meter').val() 
+
      if ( currentAP < 0 && currentHP > 0) {
         $('.freaky-fungus').addClass('jump').removeClass('walk')
     }       
     else if (currentHP <= 0) {
             $('.freaky-fungus').addClass('dead')
         }
-    if (currentAP < 0) {
+    if (currentAP <= 0) {
         currentAP = 0
         $('.attack-btn').addClass('disabled')
         $('.attack-btn').unbind('click');
         }   
 
-    if (currentHP < 0) {
+    if (currentHP <=0) {
         currentHP = 0
         $('.attack-btn').addClass('disabled')
         $('.attack-btn').unbind('click');    }
+
+    
 
     render()
 }
@@ -73,12 +78,12 @@ function entangleBtn() {
             $('.freaky-fungus').addClass('dead')
         }
     
-  if (currentAP < 0) {
+  if (currentAP <= 0) {
         currentAP = 0
         $('.attack-btn').addClass('disabled')
         $('.attack-btn').unbind('click');        
         }        
-    if (currentHP < 0) {
+    if (currentHP <= 0) {
         currentHP = 0
         $('.attack-btn').addClass('disabled')
         $('.attack-btn').unbind('click');    }
@@ -97,12 +102,12 @@ function dragonBtn() {
             $('.freaky-fungus').addClass('dead')
         }
 
-    if (currentAP < 0) {
+    if (currentAP <= 0) {
         currentAP = 0
         $('.attack-btn').addClass('disabled')
         $('.attack-btn').unbind('click');        
         }        
-    if (currentHP < 0) {
+    if (currentHP <= 0) {
         currentHP = 0
         $('.attack-btn').addClass('disabled')
         $('.attack-btn').unbind('click');    }
@@ -121,12 +126,12 @@ function starFireBtn() {
     else if (currentHP <= 0) {
             $('.freaky-fungus').addClass('dead')
         }
-    if (currentAP < 0) {
+    if (currentAP <= 0) {
         currentAP = 0
         $('.attack-btn').addClass('disabled')
         $('.attack-btn').unbind('click');        }        
 
-    if (currentHP < 0) {
+    if (currentHP <= 0) {
         currentHP = 0
         $('.attack-btn').addClass('disabled')
         $('.attack-btn').unbind('click');    }
