@@ -160,7 +160,7 @@ body:has( .freaky-fungus.dead) {
     background-size: cover;
     cursor: pointer;
 }
-.attack-btn[disabled] {
+.attack-btn.disabled {
     cursor: not-allowed;
 }
 

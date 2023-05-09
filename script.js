@@ -38,6 +38,8 @@ function render() {
 }
 
 function arcaneScepterBtn() {
+    console.log(currentAP,' - 12');
+    console.log(currentHP,' - 14');
      currentAP -= 12
      currentHP -= 14
      if ( currentAP < 0 && currentHP > 0) {
@@ -47,12 +49,15 @@ function arcaneScepterBtn() {
             $('.freaky-fungus').addClass('dead')
         }
     if (currentAP < 0) {
-        currentAP = 0;
-        
-        }        
+        currentAP = 0
+        $('.attack-btn').addClass('disabled')
+        $('.attack-btn').unbind('click');
+        }   
+
     if (currentHP < 0) {
         currentHP = 0
-    }
+        $('.attack-btn').addClass('disabled')
+        $('.attack-btn').unbind('click');    }
 
     render()
 }
@@ -69,12 +74,14 @@ function entangleBtn() {
         }
     
   if (currentAP < 0) {
-        currentAP = 0;
-        
+        currentAP = 0
+        $('.attack-btn').addClass('disabled')
+        $('.attack-btn').unbind('click');        
         }        
     if (currentHP < 0) {
         currentHP = 0
-    }
+        $('.attack-btn').addClass('disabled')
+        $('.attack-btn').unbind('click');    }
     
     render()
 }
@@ -91,12 +98,14 @@ function dragonBtn() {
         }
 
     if (currentAP < 0) {
-        currentAP = 0;
-        
+        currentAP = 0
+        $('.attack-btn').addClass('disabled')
+        $('.attack-btn').unbind('click');        
         }        
     if (currentHP < 0) {
         currentHP = 0
-    }
+        $('.attack-btn').addClass('disabled')
+        $('.attack-btn').unbind('click');    }
 
 
     render()
@@ -113,12 +122,14 @@ function starFireBtn() {
             $('.freaky-fungus').addClass('dead')
         }
     if (currentAP < 0) {
-        currentAP = 0;
-        
-        }        
+        currentAP = 0
+        $('.attack-btn').addClass('disabled')
+        $('.attack-btn').unbind('click');        }        
+
     if (currentHP < 0) {
         currentHP = 0
-    }
+        $('.attack-btn').addClass('disabled')
+        $('.attack-btn').unbind('click');    }
     
     render() 
     }
