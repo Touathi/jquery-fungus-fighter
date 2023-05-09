@@ -35,7 +35,7 @@ function render() {
     console.log('Current AP: ',currentAP);
     $('.hp-text').text(currentHP)
     console.log('Current HP: ',currentHP);
-    $('.ap-meter').val()
+    // $('.ap-meter').val()
 
 }
 
@@ -43,24 +43,27 @@ function arcaneScepterBtn() {
      currentAP -= 12
      currentHP -= 14
 
-     $('.ap-meter').val() 
+    //  $('.ap-meter').val() 
 
      if ( currentAP < 0 && currentHP > 0) {
         $('.freaky-fungus').addClass('jump').removeClass('walk')
+        $('.attack-btn').prop('disabled', true)
     }       
     else if (currentHP <= 0) {
             $('.freaky-fungus').addClass('dead')
+            $('.attack-btn').prop('disabled', true)
         }
     if (currentAP <= 0) {
         currentAP = 0
-        $('.attack-btn').addClass('disabled')
-        $('.attack-btn').unbind('click');
+        $('.attack-btn').prop('disabled', true)
+        // $('.attack-btn').unbind('click');
         }   
 
     if (currentHP <=0) {
         currentHP = 0
-        $('.attack-btn').addClass('disabled')
-        $('.attack-btn').unbind('click');    }
+        $('.attack-btn').prop('disabled', true)
+        // $('.attack-btn').unbind('click');    
+    }
 
     
 
@@ -73,20 +76,23 @@ function entangleBtn() {
     
     if ( currentAP < 0 && currentHP > 0) {
         $('.freaky-fungus').addClass('jump').removeClass('walk')
+        $('.attack-btn').prop('disabled', true)
     }       
     else if (currentHP <= 0) {
             $('.freaky-fungus').addClass('dead')
+            $('.attack-btn').prop('disabled', true)
         }
     
   if (currentAP <= 0) {
         currentAP = 0
-        $('.attack-btn').addClass('disabled')
-        $('.attack-btn').unbind('click');        
+        $('.attack-btn').prop('disabled', true)
+        // $('.attack-btn').unbind('click');        
         }        
     if (currentHP <= 0) {
         currentHP = 0
-        $('.attack-btn').addClass('disabled')
-        $('.attack-btn').unbind('click');    }
+        $('.attack-btn').prop('disabled', true)
+        // $('.attack-btn').unbind('click');  
+      }
     
     render()
 }
@@ -97,20 +103,23 @@ function dragonBtn() {
     
     if ( currentAP < 0 && currentHP > 0) {
         $('.freaky-fungus').addClass('jump').removeClass('walk')
+        $('.attack-btn').prop('disabled', true)
     }       
     else if (currentHP <= 0) {
             $('.freaky-fungus').addClass('dead')
+            $('.attack-btn').prop('disabled', true)
         }
 
     if (currentAP <= 0) {
         currentAP = 0
-        $('.attack-btn').addClass('disabled')
-        $('.attack-btn').unbind('click');        
+        $('.attack-btn').prop('disabled', true)
+        // $('.attack-btn').unbind('click');        
         }        
     if (currentHP <= 0) {
         currentHP = 0
-        $('.attack-btn').addClass('disabled')
-        $('.attack-btn').unbind('click');    }
+        $('.attack-btn').prop('disabled', true)
+        // $('.attack-btn').unbind('click');
+     }
 
 
     render()
@@ -122,19 +131,23 @@ function starFireBtn() {
     
     if ( currentAP < 0 && currentHP > 0) {
         $('.freaky-fungus').addClass('jump').removeClass('walk')
+        $('.attack-btn').prop('disabled', true)
     }       
     else if (currentHP <= 0) {
             $('.freaky-fungus').addClass('dead')
+            $('.attack-btn').prop('disabled', true)
         }
     if (currentAP <= 0) {
         currentAP = 0
-        $('.attack-btn').addClass('disabled')
-        $('.attack-btn').unbind('click');        }        
+        $('.attack-btn').prop('disabled', true)
+        // $('.attack-btn').unbind('click');     
+       }        
 
     if (currentHP <= 0) {
         currentHP = 0
-        $('.attack-btn').addClass('disabled')
-        $('.attack-btn').unbind('click');    }
+        $('.attack-btn').prop('disabled', true)
+        // $('.attack-btn').unbind('click'); 
+       }
     
     render() 
     }
