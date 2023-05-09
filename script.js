@@ -35,12 +35,6 @@ function render() {
     $('.hp-text').text(currentHP)
     console.log('Current HP: ',currentHP);
 
-    // if (currentAP === 100) {
-    //     $('.freaky-fungus').addClass('jump')
-    // }
-    // else if ( currentAP > 0 && currentHP <= 0) {
-    //     $('.freaky-fungus').addClass('dead')
-    // }
 }
 
 function arcaneScepterBtn() {
@@ -52,6 +46,14 @@ function arcaneScepterBtn() {
     else if (currentHP <= 0) {
             $('.freaky-fungus').addClass('dead')
         }
+    if (currentAP < 0) {
+        currentAP = 0;
+        
+        }        
+    if (currentHP < 0) {
+        currentHP = 0
+    }
+
     render()
 }
 
@@ -65,6 +67,15 @@ function entangleBtn() {
     else if (currentHP <= 0) {
             $('.freaky-fungus').addClass('dead')
         }
+    
+  if (currentAP < 0) {
+        currentAP = 0;
+        
+        }        
+    if (currentHP < 0) {
+        currentHP = 0
+    }
+    
     render()
 }
 
@@ -78,6 +89,16 @@ function dragonBtn() {
     else if (currentHP <= 0) {
             $('.freaky-fungus').addClass('dead')
         }
+
+    if (currentAP < 0) {
+        currentAP = 0;
+        
+        }        
+    if (currentHP < 0) {
+        currentHP = 0
+    }
+
+
     render()
 }
 
@@ -91,6 +112,14 @@ function starFireBtn() {
     else if (currentHP <= 0) {
             $('.freaky-fungus').addClass('dead')
         }
+    if (currentAP < 0) {
+        currentAP = 0;
+        
+        }        
+    if (currentHP < 0) {
+        currentHP = 0
+    }
+    
     render() 
     }
     
